@@ -12,7 +12,7 @@ body {
   background-color: hsl(210, 100%, 95%);
   color: hsl(210, 100%, 20%);
 
-   overflow: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden;
 }
 
 .flexbox {
@@ -175,20 +175,33 @@ body {
 }
 
 .scroll-container {
-  height: 100vh;
+  height: 60px;
+  padding-block: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .carousel-primary {
-  top: 26%;
+  display: flex;
+  gap: 2rem;
+
+  top: 50%;
+  transform: translateY(-50%);
   left: 100%;
-  width: 100%;
-  overflow: hidden;
+  width: max-content;
   position: absolute;
-  white-space: nowrap;
+
+  animation: scroll-horizontal 20s linear infinite;
 }
 
 .carousel-primary a {
+  white-space: nowrap;
+  min-width: max-content;
+  margin-right: 2rem;
+  flex-shrink: 0;
+
   text-decoration: none;
+  align-items: center;
   color: var(--primary-color);
   font-size: 30px;
   font-weight: 600;
@@ -196,19 +209,12 @@ body {
   width: 100%;
 }
 
-.carousel-primary {
-  display: flex;
-  justify-content: space-around;
-  animation: scroll-horizontal 20s linear infinite;
-}
-
 @keyframes scroll-horizontal {
   0% {
-    left: 100%;
+    transform: translateX(100%);
   }
-
   100% {
-    left: -100%;
+    transform: translateX(-100%);
   }
 }
 
