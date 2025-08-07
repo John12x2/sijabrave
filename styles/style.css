@@ -2,23 +2,30 @@
 
 :root {
   --primary-color: hsl(210, 100%, 50%);
+
+  --duration: 5s;
+  --duration-double: 10s;
 }
 
 body {
   font-family: "Ranade", sans-serif;
   background-color: hsl(210, 100%, 95%);
   color: hsl(210, 100%, 20%);
+
+   overflow: hidden; /* Hide horizontal scrollbar */
 }
 
 .flexbox {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: stretch;
+  gap: 2rem;
   padding: 2rem;
+  padding-top: 12rem;
   flex-wrap: wrap;
 
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -122,12 +129,15 @@ body {
 .content {
   background-color: var(--primary-color);
   display: flex;
+  flex: 2 1 400px;
   flex-direction: column;
+  flex-grow: 1;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   margin: 0 auto;
-  margin-top: 10rem;
-  max-width: 800px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -142,24 +152,64 @@ body {
   color: white;
 }
 
-.welcome-text,
 .welcome-image {
-  background-color: var(--primary-color);
   border-radius: 20px;
   padding: 1.5rem;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
 
-.welcome-text {
-  max-width: 500px;
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 480px;
+
+  text-align: center;
 }
 
 .welcome-image img {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
   max-width: 300px;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.scroll-container {
+  height: 100vh;
+}
+
+.carousel-primary {
+  top: 26%;
+  left: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.carousel-primary a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 600;
+  height: 3rem;
+  width: 100%;
+}
+
+.carousel-primary {
+  display: flex;
+  justify-content: space-around;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
+  }
 }
 
 #main {
@@ -177,9 +227,14 @@ body {
   .navbar-header {
     font-size: 1.5rem;
   }
-
   .content {
     margin-top: 5rem;
     overflow: auto;
+  }
+  .flexbox {
+    flex-direction: column-reverse; /* Stack vertically on small screens */
+    align-items: center;
+
+    padding-top: 0rem;
   }
 }
