@@ -234,6 +234,7 @@ body {
 
   .carousel-item {
     object-fit: contain;
+    padding: 3rem;
   }
   .content {
     margin-top: 5rem;
