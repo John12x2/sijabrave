@@ -22,7 +22,7 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 2rem;
-  padding-top: 12rem;
+  padding-top: 3rem;
   flex-wrap: wrap;
 
   max-width: 1000px;
@@ -37,7 +37,8 @@ body {
 
   display: flex;
   align-items: center; /* 🔥 This centers the text vertically */
-  height: 3rem;
+  height: 4rem;
+  gap: 0.5rem;
 }
 
 .navbar-logo img {
@@ -50,12 +51,14 @@ body {
 }
 
 .navbar-logo h1 {
+  position: relative;
+  top: 3px;
+
   font-family: "Ranade", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
+  line-height: 1;
   color: white;
-
-  margin-left: 0.5rem;
 }
 
 .navbar-header {
@@ -80,7 +83,7 @@ body {
 
   display: inline-block;
   cursor: pointer;
-  padding: 14px 18px;
+  padding: 10px 16px;
   font-size: 24px;
 }
 
@@ -98,6 +101,16 @@ body {
 
   padding-top: 60px;
   transition: 0.5s;
+}
+
+.navbar-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  width: 10rem;
+  border-radius: 20px;
 }
 
 .navbar-container li {
@@ -175,48 +188,20 @@ body {
   margin: 0 auto;
 }
 
-.scroll-container {
-  height: 60px;
-  padding-block: 1rem;
-  position: relative;
-  overflow: hidden;
+.carousel-item img {
+  padding: 20px;
+  max-height: 500px; /* ⬅️ Controls vertical size */
+  height: 1000px; 
+  width: 100%;       /* Maintain aspect ratio */
+  margin: 0 auto;    /* Center horizontally */
+  display: block;
+
+  object-fit: cover;
+  object-position: center 80%; /* Optional: crop to fill if needed */
 }
 
-.carousel-primary {
-  display: flex;
-  gap: 2rem;
-
-  top: 50%;
-  transform: translateY(-50%);
-  left: 100%;
-  width: max-content;
-  position: absolute;
-
-  animation: scroll-horizontal 20s linear infinite;
-}
-
-.carousel-primary a {
-  white-space: nowrap;
-  min-width: max-content;
-  margin-right: 2rem;
-  flex-shrink: 0;
-
-  text-decoration: none;
-  align-items: center;
-  color: var(--primary-color);
-  font-size: 30px;
-  font-weight: 600;
-  height: 3rem;
-  width: 100%;
-}
-
-@keyframes scroll-horizontal {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: -100%;
-  }
+#carouselExampleIndicators {
+  transition: opacity 0.5s ease;
 }
 
 #main {
@@ -234,6 +219,22 @@ body {
   .navbar-header {
     font-size: 1.5rem;
   }
+  .navbar-logo h1 {
+    font-size: 1.1rem;
+  }
+
+  .navbar-logo img {
+    height: 2rem;
+  }
+
+  .navbar-logo {
+    padding: 6px;
+    height: 3.5rem;
+  }
+
+  .carousel-item {
+    object-fit: contain;
+  }
   .content {
     margin-top: 5rem;
     overflow: auto;
@@ -243,5 +244,10 @@ body {
     align-items: center;
 
     padding-top: 0rem;
+  }
+}
+@media (max-width: 768px) {
+  body.menu-open .carousel-indicators {
+    display: none;
   }
 }
