@@ -190,14 +190,14 @@ body {
 
 .carousel-item img {
   padding: 20px;
-  max-height: 500px; /* ⬅️ Controls vertical size */
-  height: 1000px; 
+  max-height: 700px; /* ⬅️ Controls vertical size */
+  height: 700px; 
   width: 100%;       /* Maintain aspect ratio */
   margin: 0 auto;    /* Center horizontally */
   display: block;
 
   object-fit: cover;
-  object-position: center 80%; /* Optional: crop to fill if needed */
+  object-position: center 85%; /* Optional: crop to fill if needed */
 }
 
 #carouselExampleIndicators {
