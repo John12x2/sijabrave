@@ -88,8 +88,16 @@ body {
 
   display: inline-block;
   cursor: pointer;
-  padding: 10px 16px;
+  padding: 10px 14px;
   font-size: 24px;
+}
+
+.navbar-header button:active {
+  color: var(--primary-color-3);
+}
+
+.navbar-header button:focus {
+  outline: none;
 }
 
 .navbar-container {
