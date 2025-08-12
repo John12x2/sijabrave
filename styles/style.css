@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Economica:400,700);
 
 :root {
-  --background-color: hsl(222, 13%, 15%);
+  --background-color: hsl(204, 14%, 7%);
   --primary-color: hsl(250, 100%, 69%);
   --primary-color-2: hsl(220, 18%, 97%);
   --primary-color-3: hsl(260, 100%, 78%);
@@ -199,6 +199,11 @@ body {
   margin: 0 auto;
 }
 
+.carousel {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
 .carousel-item img {
   padding: 20px;
   max-height: 700px; /* ⬅️ Controls vertical size */
@@ -209,6 +214,26 @@ body {
 
   object-fit: cover;
   object-position: center 85%; /* Optional: crop to fill if needed */
+}
+
+.footer {
+  position: relative; /* was 'display: relative', fixed here */
+  margin-left: auto;   /* push to the right */
+  margin-right: 2rem; /* your gap */
+  width: 180px;        /* or whatever width you want */
+
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  background: linear-gradient(90deg, hsl(255, 81%, 67%), hsl(245, 85%, 75%));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.footer h1 {
+  padding: 10px;
+
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 #carouselExampleIndicators {
@@ -241,6 +266,11 @@ body {
   .navbar-logo {
     padding: 6px;
     height: 3.5rem;
+  }
+
+  .carousel {
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 
   .carousel-item {
