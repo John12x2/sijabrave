@@ -14,7 +14,7 @@
 body {
   font-family: "Ranade", sans-serif;
   background-color: var(--background-color);
-  background-image: url("/images/background.svg");
+  background-image: url("images/background.svg");
   background-repeat: repeat;
   background-blend-mode: lighten;
   color: var(--primary-color-2);
@@ -341,7 +341,7 @@ body {
 }
 
 .prakata-container:hover {
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   transform: scale(1.02);
   box-shadow: 0 4px 12px 6px rgba(216, 216, 216, 0.4);
 }
