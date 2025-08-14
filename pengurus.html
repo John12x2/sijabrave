@@ -29,7 +29,9 @@
   <body>
     <nav>
       <div class="navbar-header">
-        <button onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+        <button onclick="openNav()">
+          <i class="fa-solid fa-code"></i>
+        </button>
         <div class="navbar-logo">
           <img src="images/logo.jpg" alt="SIJA Brave Logo" />
           <h1>SIJA BRAVE</h1>
@@ -39,7 +41,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
           >&times;</a
         >
-        <img src="images/logo.jpg" alt="logo nav" />
+        <a href="index.html"><img src="images/logo.jpg" alt="logo nav" /></a>
         <ul>
           <li>
             <a href=""><i class="fa-solid fa-user"></i> Pengurus</a>
@@ -56,58 +58,31 @@
         </ul>
       </div>
     </nav>
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-ride="carousel"
-    >
-      <ol class="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to="0"
-          class="active"
-        ></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="images/img1.jpg" alt="First Slide" />
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/img2.jpg" alt="Second slide" />
-        </div>
-      </div>
-      <a
-        class="carousel-control-prev"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
     <div class="flexbox">
-      <div class="welcome-image">
-        <img src="images/logo.jpg" alt="Welcome Image" />
-      </div>
       <div class="content">
-        <h1>Welcome to SIJA Brave</h1>
+        <h1>Pengurus Kelas & Website</h1>
         <p>
-          SIJA Brave is a platform designed to help students manage their
-          assignments and tasks efficiently. Here, you can find all the
-          resources you need to stay organized and on top of your studies.
+          Di sini kalian dapat mengetahui informasi mengenai pengurus kelas dan
+          pengelola website.
         </p>
       </div>
+      <div class="prakata-image" alt="Kelas X">
+        <h2>Kelas X</h2>
+        <img src="images/logo.jpg" alt="wali" />
+        <h1>Winarni, S.Pd</h1>
+      </div>
+      <h1 id="prakata" class="section-title">Prakata Wali Kelas</h1>
+      <div class="prakata-container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+          corrupti excepturi quo ducimus quia ratione veritatis accusantium
+          fugit quos magni. Sapiente, ipsum. Reprehenderit minima ratione
+          tempore nam! Consequatur, alias. Repellat?
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <h1><i class="fa-regular fa-copyright"></i> 2025 SIJA Brave</h1>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
