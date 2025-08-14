@@ -353,6 +353,11 @@ body {
   box-shadow: 0 4px 12px 6px rgba(216, 216, 216, 0.4);
 }
 
+#disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 #carouselExampleIndicators {
   transition: opacity 0.5s ease;
 }
