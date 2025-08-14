@@ -250,6 +250,7 @@ body {
 }
 
 .footer h1 {
+  margin: 0 auto;
   padding: 10px;
   text-align: center;
   font-size: 1rem;
