@@ -304,16 +304,22 @@ body {
 }
 
 .prakata-image h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(90deg, hsl(255,81%,67%), hsl(245,85%,75%));
-  z-index: 1000;
+  position: relative;
+  top: -2rem; /* Adjust the overlap height */
+  margin-top: 0;
+  display: inline-block;
 
-  border-radius: 20px;
-  font-size: 2rem;
+  padding: 0.4rem 1.2rem;
+  background: linear-gradient(90deg, hsl(255,81%,67%), hsl(245,85%,75%));
+  color: white;
+
+  border-radius: 999px;
+  font-size: 1.8rem;
   font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
+
 
 .prakata-image h2 {
   display: flex;
@@ -338,10 +344,10 @@ body {
   text-align: justify;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(158, 158, 158, 0.4);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .prakata-container:hover {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   transform: scale(1.02);
   box-shadow: 0 4px 12px 6px rgba(216, 216, 216, 0.4);
 }
