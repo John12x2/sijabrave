@@ -343,14 +343,37 @@ body {
   background: linear-gradient(90deg, hsl(255, 81%, 67%), hsl(245, 85%, 75%));
 
   text-align: justify;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(158, 158, 158, 0.4);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .prakata-container:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px 6px rgba(216, 216, 216, 0.4);
+  transform: scale(1.005);
+  box-shadow: 0 4px 12px 4px rgba(216, 216, 216, 0.4);
+}
+
+.pengurus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+  margin: 4rem auto;
+}
+
+.pengurus-container h1 {
+  margin: 0 auto;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.pengurus-main {
+  background: linear-gradient(90deg, hsl(255, 81%, 67%), hsl(245, 85%, 75%));
+  margin: 4rem auto;
+  padding: 2rem;
+
+  border-radius: 20px;
 }
 
 #disabled {
