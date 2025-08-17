@@ -538,6 +538,14 @@ body {
     padding-top: 0rem;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media (max-width: 768px) {
   body.menu-open .carousel-indicators {
     display: none;
@@ -545,5 +553,35 @@ body {
 
   .carousel-item img {
     max-height: 500px;
+  }
+
+  .row {
+    column-gap: 4rem;
+    row-gap: 1.5rem;
+  }
+
+  .pengurus-card {
+    margin: 0.5rem;
+    padding: 0.8rem;
+    align-items: center;
+  }
+
+  .pengurus-card img {
+    width: 12rem;
+  }
+
+  .pengurus-card h1 {
+    font-size: 1.4rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .quote {
+    max-width: 90%;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .quote.show {
+    padding: 0.5rem 1rem;
   }
 }
