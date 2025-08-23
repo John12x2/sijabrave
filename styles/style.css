@@ -23,6 +23,13 @@ body {
   padding-bottom: 3rem;
 }
 
+img {
+  -webkit-user-drag: none; /* For Webkit-based browsers like Chrome, Safari */
+  -khtml-user-drag: none;  /* For older KHTML-based browsers */
+  -moz-user-drag: none;    /* For Mozilla Firefox */
+  -o-user-drag: none;      /* For Opera */
+}
+
 .flexbox {
   display: flex;
   flex-direction: column;
@@ -398,7 +405,6 @@ body {
   flex-direction: column;
   margin: 1rem;
   padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pengurus-card img {
@@ -407,6 +413,7 @@ body {
   border-radius: 50%;
 
   cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .pengurus-card img:hover {
